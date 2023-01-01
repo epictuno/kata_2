@@ -7,22 +7,22 @@ import java.util.Map;
  *
  * @author tanay
  */
-public class Histogram {
-    private final Integer[] data;
+public class Histogram<T> {
+    private final T[] data;
 
-    public Histogram(Integer[] dato) {
+    public Histogram(T[] dato) {
         this.data = dato;
     }
     public Map getHistogram(){
-        Map<Integer,Integer> histogram;
+        Map<T,Integer> histogram;
         histogram = new HashMap<>();
         int dats; 
-        for (Integer i : data) {
+        for (T i : data) {
             dats = histogram.containsKey(i)? histogram.get(i)+1:1;
             histogram.put(i,dats);}
         return histogram;
     }
-    public Integer[] getHistogramGenerator(){
+    public T[] getHistogramGenerator(){
         return this.data;
     }
     }
