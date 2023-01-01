@@ -12,8 +12,7 @@ public class Kata2 {
         int [] data={9,2,3,4,5,8,1,2,3,9,5,3,6,2,7,3,6,0};
         int dats; 
         for (int i = 0; i < data.length; i++) {
-            if(mapa.containsKey(data[i])){dats=mapa.get(data[i])+1;}
-            else{dats=1;}
+            dats=mapa.containsKey(data[i])? mapa.get(data[i])+1:1;
             mapa.put(data[i],dats);
         }
         Iterator<Map.Entry<Integer,Integer>> iterador=mapa.entrySet().iterator();
