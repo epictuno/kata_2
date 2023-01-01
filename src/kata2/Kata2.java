@@ -11,10 +11,10 @@ public class Kata2 {
         mapa = new HashMap<>();
         int [] data={9,2,3,4,5,8,1,2,3,9,5,3,6,2,7,3,6,0};
         int dats; 
-        for (int i = 0; i < data.length; i++) {
-            dats=mapa.containsKey(data[i])? mapa.get(data[i])+1:1;
-            mapa.put(data[i],dats);
-        }
+         for (Integer i : data) {
+            dats = mapa.containsKey(i)? mapa.get(i)+1:1;
+            mapa.put(i,dats);
+         }
         Iterator<Map.Entry<Integer,Integer>> iterador=mapa.entrySet().iterator();
         while(iterador.hasNext()){
             Map.Entry entry = (Map.Entry) iterador.next();
